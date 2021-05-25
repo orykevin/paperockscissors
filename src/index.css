@@ -407,25 +407,42 @@ div.displayFl {
   outline: solid;
   background-color: white;
 }
-.f1:hover .hand-pick,
-.s2:hover .hand-pick,
-.t3:hover .hand-pick {
-  fill: #88abe5;
-}
-.f1:hover,
-.s2:hover,
-.t3:hover {
-  cursor: pointer;
-  outline: solid #88abe5 4px;
-  color: #88abe5;
-  font-weight: 700;
-}
 
 .first-pick p,
 .second-pick p,
 .third-pick p {
   margin-left: 7px;
   text-align: center;
+}
+@media only screen and (max-width: 512px) {
+  .f1:active .hand-pick,
+  .s2:hover:active .hand-pick,
+  .t3:hover:active .hand-pick {
+    fill: #88abe5;
+  }
+  .f1:hover:active,
+  .s2:hover:active,
+  .t3:hover:active {
+    cursor: pointer;
+    outline: solid #88abe5 4px;
+    color: #88abe5;
+    font-weight: 700;
+  }
+}
+@media only screen and (min-width: 512px) {
+  .f1:hover .hand-pick,
+  .s2:hover .hand-pick,
+  .t3:hover .hand-pick {
+    fill: #88abe5;
+  }
+  .f1:hover,
+  .s2:hover,
+  .t3:hover {
+    cursor: pointer;
+    outline: solid #88abe5 4px;
+    color: #88abe5;
+    font-weight: 700;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
