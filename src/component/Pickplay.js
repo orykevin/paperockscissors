@@ -156,18 +156,21 @@ const Pickplay = ({pick,setPick,random,setRandom,verify,setVerify,picked,setPick
         return false
     }
     return (
-        <div className ="pick-play">
-            <button className={`first-pick ${picked.p1=="not"&&point.p1 !== 3 &&point.p2 !==3 ?"f1":""}`} disabled={disableBut()} onClick={()=>verify.mode === 0 ? clickPicked(0) : (point.p1 === 2 || point.p2 === 2) ? clickSpecial(3) : clickSpecial(0)}>
+        <div className ="pick-play" onTouchStart="">
+            <button onTouchStart="" className={`first-pick ${picked.p1=="not"&&point.p1 !== 3 &&point.p2 !==3 ?"f1":""}`} disabled={disableBut()} onClick={()=>verify.mode === 0 ? clickPicked(0) : (point.p1 === 2 || point.p2 === 2) ? clickSpecial(3) : clickSpecial(0)}>
                 {verify.mode === 0 ? handData[0].img : handData[replacing(0)].img}
                 <p>{verify.mode === 0 ? handData[0].name : handData[replacing(0)].name}</p>
+                <span className="border"></span>
             </button>
             <button className={`second-pick ${picked.p1=="not"&&point.p1 !== 3 &&point.p2 !==3?"s2":""}`} disabled={disableBut()} onClick={()=>verify.mode === 0 ? clickPicked(1) : (point.p1 === 2 || point.p2 === 2) ? clickSpecial(4) : clickSpecial(1)}>
                 {verify.mode === 0 ? handData[1].img : handData[replacing(1)].img}
                 <p>{verify.mode === 0 ? handData[1].name : handData[replacing(1)].name}</p>
+                <span className="border"></span>
             </button>
             <button className={`third-pick ${picked.p1=="not"&&point.p1 !== 3 &&point.p2 !==3?"t3":""}`} disabled={disableBut()} onClick={()=>verify.mode === 0 ? clickPicked(2) : (point.p1 === 2 || point.p2 === 2) ? clickSpecial(5) : clickSpecial(2)}>
                 {verify.mode === 0 ? handData[2].img : handData[replacing(2)].img}
                 <p>{verify.mode === 0 ? handData[2].name : handData[replacing(2)].name}</p>
+                <span className="border"></span>
             </button>
         </div>
     )

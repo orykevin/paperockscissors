@@ -268,7 +268,6 @@ nav p.clickable {
   max-width: 250px;
   object-fit: cover;
 }
-
 .scoreboard {
   width: 90%;
   height: 100px;
@@ -406,6 +405,7 @@ div.displayFl {
   width: 150px;
   outline: solid;
   background-color: white;
+  position: relative;
 }
 
 .first-pick p,
@@ -414,6 +414,18 @@ div.displayFl {
   margin-left: 7px;
   text-align: center;
 }
+.border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: solid #88abe5 7px;
+  background: none;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
 @media only screen and (max-width: 512px) {
   .f1:active .hand-pick,
   .s2:hover:active .hand-pick,
@@ -427,6 +439,10 @@ div.displayFl {
     outline: solid #88abe5 4px;
     color: #88abe5;
     font-weight: 700;
+  }
+  .title-front {
+    font-size: 36px;
+    width: 90%;
   }
 }
 @media only screen and (min-width: 512px) {
@@ -517,5 +533,43 @@ div.displayFl {
     outline: solid 1px;
     height: 100vh;
     overflow-y: auto;
+  }
+}
+@media only screen and (max-height: 750px) {
+  .play-mode h1 {
+    margin: 25px 0px 15px 20px;
+  }
+  .historyboard {
+    height: 55px;
+  }
+  .p1 {
+    margin-top: 4px;
+  }
+  .score-1 img {
+    width: 22px;
+  }
+  .screenplay {
+    height: 150px;
+    outline: solid 2px;
+  }
+  .scoreboard {
+    width: 97%;
+    height: 90px;
+  }
+  .play-1 h4,
+  .play-2 h4 {
+    margin: 0 0 5px 0;
+  }
+  .play-1 h4,
+  .play-2 h4 {
+  }
+  .pick-play {
+    height: 120px;
+  }
+  .hand-pick {
+    width: 70px;
+  }
+  .infoboard {
+    margin: 0px auto;
   }
 }

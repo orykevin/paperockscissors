@@ -32,7 +32,7 @@ const Specialrule = ({display,displayRule}) => {
                 <h1>Third point</h1>
                 <img src={thrdRule} alt="" />
                 <p>both player choose
-                   gun,hammer, or gun</p>
+                   gloves,hammer,or gun</p>
             </div>
         </div>
     )
